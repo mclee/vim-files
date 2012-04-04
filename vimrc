@@ -6,6 +6,7 @@ call pathogen#helptags()
 
 " Auto NERDTree on startup
 "autocmd vimenter * NERDTree
+
 " Toggle NERDTree with \n
 map <Leader>n :NERDTreeToggle<CR>
 
@@ -53,6 +54,9 @@ nnoremap <C-Q> :TlistToggle<CR>
 
 " Supertabs
 let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
+
+" RubyTest - change from <Leader>t to <Leader>\
+map <Leader>\ <Plug>RubyTestRun
 
 " Filetypes
 au BufRead,BufNewFile *.ros     set filetype=php

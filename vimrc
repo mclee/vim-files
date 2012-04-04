@@ -46,6 +46,12 @@ inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR> 
 vnoremap <C-P> :call PhpDocRange()<CR> 
 
+" Ctrl-Q to toggle Taglist
+nnoremap <C-Q> :TlistToggle<CR>
+
+" Supertabs
+let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
+
 " Filetypes
 au BufRead,BufNewFile *.ros     set filetype=php
 au BufRead,BufNewFile *.tt2     set filetype=tt2
@@ -60,6 +66,7 @@ highlight Search term=reverse ctermbg=4 ctermfg=7
 "let g:solarized_contrast='normal'
 "set background=dark
 "colorscheme solarized
+"colorscheme vividchalk 
 
 " Swap files. Generally things are in version control
 " don't use backupfiles either.
@@ -70,6 +77,12 @@ set nowritebackup
 " Persistent undos
 set undodir=~/.vim/backup
 set undofile
+
+" Autocompletes
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType js set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType rb set omnifunc=rubycomplete#Complete
 
 " {{{ Filetypes
 "
@@ -100,7 +113,6 @@ au FileType ruby setl softtabstop=2 tabstop=2 expandtab
 
 " PHP settings
 au FileType php setl textwidth=120 softtabstop=4 shiftwidth=4 tabstop=4 noexpandtab
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 " Javascript settings
 au FileType javascript setl textwidth=120 softtabstop=4 shiftwidth=4 tabstop=4 noexpandtab

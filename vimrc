@@ -41,6 +41,12 @@ set statusline=%t\ %y\ format:\ %{&ff};\ [%l,%c]
 " Fancy Powerlines
 let g:Powerline_symbols = 'fancy'
 
+" PHPDoc for Vim: PDV
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
+nnoremap <C-P> :call PhpDocSingle()<CR> 
+vnoremap <C-P> :call PhpDocRange()<CR> 
+
+" Filetypes
 au BufRead,BufNewFile *.ros     set filetype=php
 au BufRead,BufNewFile *.tt2     set filetype=tt2
 au BufRead,BufNewFile *.thtml   set filetype=php

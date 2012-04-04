@@ -58,3 +58,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
+[submodule "bundle/PDV"]
+	path = bundle/PDV
+	url = git://github.com/vim-scripts/PDV--phpDocumentor-for-Vim.git

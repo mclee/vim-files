@@ -1,7 +1,10 @@
 set nocp
+
 " Include pathogen
 call pathogen#infect()
 call pathogen#helptags()
+
+syntax on
 set fileencodings=utf-8
 set encoding=utf-8
 set tenc=utf-8
@@ -13,21 +16,46 @@ set fileencoding=utf-8
 set hls
 set sw=4
 set ru
-syntax on
+
+" Whitespace stuff
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+"set list listchars=tab:▸\ ,eol:¬,trail:·
+set noeol
 set autoindent
-"set nu
-"if has('gui_running')
-"  set background=light
-"else
-"  set background=dark
-"endif
-"colorscheme solarized
-highlight Comment ctermfg=darkcyan
-highlight Search term=reverse ctermbg=4 ctermfg=7
+
+" Window settings
+set wrap
+set lbr
+set textwidth=0
+set cursorline
+
+" Status bar
+set laststatus=2
+set statusline=%t\ %y\ format:\ %{&ff};\ [%l,%c]
+
 au BufRead,BufNewFile *.ros     set filetype=php
 au BufRead,BufNewFile *.tt2     set filetype=tt2
 au BufRead,BufNewFile *.thtml   set filetype=php
 au BufRead,BufNewFile *.ctp     set filetype=php
+
+" Default color scheme
+set guifont=Bitstream\ Vera\ Sans\ Mono:h12
+let g:solarized_visibility='medium'
+let g:solarized_contrast='normal'
+set background=dark
+colorscheme solarized
+
+" Swap files. Generally things are in version control
+" don't use backupfiles either.
+set noswapfile
+set nobackup
+set nowritebackup
+
+" Persistent undos
+set undodir=~/.vim/backup
+set undofile
 
 " {{{ Filetypes
 "
@@ -39,6 +67,9 @@ au FileType make setl noexpandtab
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+
+" Map .twig files as jinja templates
+au BufRead,BufNewFile *.{twig}  set ft=htmljinja
 
 " Map *.coffee to coffee type
 au BufRead,BufNewFile *.coffee  set ft=coffee

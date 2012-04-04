@@ -4,6 +4,9 @@ set nocp
 call pathogen#infect()
 call pathogen#helptags()
 
+" Auto NERDTree on startup
+"autocmd vimenter * NERDTree
+
 syntax on
 set fileencodings=utf-8
 set encoding=utf-8
@@ -35,17 +38,22 @@ set cursorline
 set laststatus=2
 set statusline=%t\ %y\ format:\ %{&ff};\ [%l,%c]
 
+" Fancy Powerlines
+let g:Powerline_symbols = 'fancy'
+
 au BufRead,BufNewFile *.ros     set filetype=php
 au BufRead,BufNewFile *.tt2     set filetype=tt2
 au BufRead,BufNewFile *.thtml   set filetype=php
 au BufRead,BufNewFile *.ctp     set filetype=php
 
 " Default color scheme
-set guifont=Bitstream\ Vera\ Sans\ Mono:h12
-let g:solarized_visibility='medium'
-let g:solarized_contrast='normal'
-set background=dark
-colorscheme solarized
+" set guifont=Bitstream\ Vera\ Sans\ Mono:h12
+highlight Comment ctermfg=darkcyan
+highlight Search term=reverse ctermbg=4 ctermfg=7
+"let g:solarized_visibility='medium'
+"let g:solarized_contrast='normal'
+"set background=dark
+"colorscheme solarized
 
 " Swap files. Generally things are in version control
 " don't use backupfiles either.

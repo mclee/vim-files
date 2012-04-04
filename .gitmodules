@@ -64,6 +64,3 @@
 [submodule "bundle/vim-rubytest"]
 	path = bundle/vim-rubytest
 	url = git://github.com/janx/vim-rubytest.git
-[submodule "bundle/vim-cakephp"]
-	path = bundle/vim-cakephp
-	url = git://github.com/ndreynolds/vim-cakephp.git

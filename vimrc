@@ -94,6 +94,7 @@ au FileType ruby setl softtabstop=2 tabstop=2 expandtab
 
 " PHP settings
 au FileType php setl textwidth=120 softtabstop=4 shiftwidth=4 tabstop=4 noexpandtab
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 " Javascript settings
 au FileType javascript setl textwidth=120 softtabstop=4 shiftwidth=4 tabstop=4 noexpandtab

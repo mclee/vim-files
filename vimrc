@@ -6,6 +6,8 @@ call pathogen#helptags()
 
 " Auto NERDTree on startup
 "autocmd vimenter * NERDTree
+" Toggle NERDTree with \n
+map <Leader>n :NERDTreeToggle<CR>
 
 syntax on
 set fileencodings=utf-8

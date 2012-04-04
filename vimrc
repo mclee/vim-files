@@ -37,6 +37,13 @@ set lbr
 set textwidth=0
 set cursorline
 
+" set folding
+set foldmethod=syntax
+set foldnestmax=3
+set foldlevel=1
+let ruby_fold = 1
+let php_folding = 1
+
 " Status bar
 set laststatus=2
 set statusline=%t\ %y\ format:\ %{&ff};\ [%l,%c]

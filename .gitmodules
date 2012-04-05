@@ -64,3 +64,6 @@
 [submodule "bundle/vim-rubytest"]
 	path = bundle/vim-rubytest
 	url = git://github.com/janx/vim-rubytest.git
+[submodule "bundle/Hemisu"]
+	path = bundle/Hemisu
+	url = git://github.com/noahfrederick/Hemisu.git

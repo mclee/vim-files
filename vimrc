@@ -20,8 +20,7 @@ set cindent
 set incsearch
 set fileencoding=utf-8
 set hls
-set sw=4
-set ru
+set t_Co=256
 
 " Whitespace stuff
 set tabstop=4
@@ -46,10 +45,10 @@ let php_folding = 1
 
 " Status bar
 set laststatus=2
-set statusline=%t\ %y\ format:\ %{&ff};\ [%l,%c]
+"set statusline=%t\ %y\ format:\ %{&ff};\ [%l,%c]
 
 " Fancy Powerlines
-let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'unicode'
 
 " PHPDoc for Vim: PDV
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
@@ -77,9 +76,10 @@ highlight Comment ctermfg=darkcyan
 highlight Search term=reverse ctermbg=4 ctermfg=7
 "let g:solarized_visibility='medium'
 "let g:solarized_contrast='normal'
-"set background=dark
+set background=dark
 "colorscheme solarized
 "colorscheme vividchalk 
+"colorscheme hemisu
 
 " Swap files. Generally things are in version control
 " don't use backupfiles either.

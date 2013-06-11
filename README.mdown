@@ -1,3 +1,4 @@
 ## Vim config
+===
 
-This is my vim config, use at your own risk.
+This repo is no longer used nor maintained. If you'd like to check my vim working environment, you should look here: [https://github.com/mclee/vim-vundle](https://github.com/mclee/vim-vundle).
